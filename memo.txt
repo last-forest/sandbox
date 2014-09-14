@@ -1,0 +1,31 @@
+プロジェクト作成
+rails new プロジェクト名
+
+サーバー立ち上げる
+rails s
+
+モデル作成
+rails g model モデル名(大文字単数) 属性名
+
+コントローラー作成
+rails g model コントローラー名(大文字複数数) 属性名
+
+未実行のマイグレーション(データ等の移行)の実行
+rake db:migrate
+
+今使ってるdbにアクセスできる
+rails db 
+rails console
+
+p = Project.create(title:"p2")
+
+routesの確認
+rake routes
+
+<% %>で囲む
+表示は<%= %>
+
+リンクを形成する
+link_to
+
+
