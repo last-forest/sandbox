@@ -5,10 +5,10 @@ rails new プロジェクト名
 rails s
 
 モデル作成
-rails g model モデル名(大文字単数) 属性名
+rails g model モデル名(大文字単数) 属性名(stringsとか)
 
 コントローラー作成
-rails g model コントローラー名(大文字複数数) 属性名
+rails g controller コントローラー名(大文字複数数) 属性名(同上)
 
 未実行のマイグレーション(データ等の移行)の実行
 rake db:migrate
@@ -17,15 +17,52 @@ rake db:migrate
 rails db 
 rails console
 
-p = Project.create(title:"p2")
+p = Project.new(title:"p1") オブジェクト作成
+Project.create(title:"p2") newとsaveを一緒にやってくれる
+p.save 保存
+p 実際にみれる
+Project.all 全部みれる
+quitでぬける
 
 routesの確認
 rake routes
 
-<% %>で囲む
-表示は<%= %>
+viewの名前はdef indexだったらindex.html.erb
+
+rubyの制御構造は<% %>で囲む
+<%= %>内容評価と表示
 
 リンクを形成する
-link_to
+link_to リンク名　リンク先
+
+rootを変える
+rputes.rbで root 'project#index'
+
+headerの中身はviewのlayoutのapplication.html.erbに書いている
+
+routesのPrefixの項目に_pathをつけるとURI Patternに変換できる
+
+controllerのparamsでroutesのURIをとることができる
+モデル.find(引数)
+
+perimit(filters)
+filtersで指定されたキーのみを含む新しいパラメータを返し、そのパラメータのpermittedの値をtrueにする
+
+validates
+検証
+validates(検証するフィールド名, :presence: true)あるかないかの制御
+
+render
+指定したRHTMLを返す
+RHTMLはrubyで使用するテンプレートファイルにつけられる拡張子
+
+
+
+
+
+
+
+
+
 
 
