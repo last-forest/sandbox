@@ -1,8 +1,13 @@
-<h1 class="hoge">Projects</h1>
+<h1 class="hoge">野球選手の名前をあげていくスレ</h1>
 <ul>
     <% @projects.each do |project|%>
-    <li><%= link_to project.title, project_path(project.id) =%></li>
+    <li>
+        <%= link_to project.title, project_path(project.id) =%>
+        <%= link_to "編集", edit_project_path(project.id) =%>
+    </li>
     <% end %>
 </ul>
 
-<p><%= link_to "add new" , new_project_path =%></p>
+<p><%= link_to "投稿する" , new_project_path =%></p>
+
+<%#= project.inspect %>
