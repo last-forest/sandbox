@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
             redirect_to projects_path
         else
             render 'new'
-      t end
+        end
     end
 
     def edit
