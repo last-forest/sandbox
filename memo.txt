@@ -66,6 +66,27 @@ viewの場合は<!---->や#を使用
 モデル.find(引数とか)
 取得
 
+before_action :set_something, only: [:show, :new, :create, :edit, :update, :destroy]
+コンストラクタみたいなもの onlyでメソッド指定
+
+rails g model Task title done:boolean project:references
+referencesはprojectにひも付け関連づけを行うことができる
+
+modelの所有
+Supplier が has_one を使用し、 Account が belongs_to
+belongs_to を使うのが所有される立場のオブジェクト、 has_many を使うのが幾つかオブジェクトを持つ側になります。
+
+only 作成されるurlをしぼりこむ
+
+汎用的なフォームを作成
+form_for(モデルオブジェクト [, オプション]) do |f|
+end
+
+build モデルオブジェクトを作成する
+モデル.build([属性])
+
+
+
 
 
 
