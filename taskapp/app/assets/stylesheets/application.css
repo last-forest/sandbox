@@ -13,4 +13,15 @@
  *= require_tree .
  *= require_self
  */
-body { background: #eee;}
+body {
+    background: #eee;
+}
+
+.huga {
+    font-size: 5px;
+}
+
+.hage {
+    font-size:40px;
+    font-weight:bold;
+}

@@ -1,14 +1,14 @@
-<h1 class="hoge">外国人騎手の名前をあげていくスレ</h1>
+<h1 class="hoge">株式掲示板</h1>
 <ul>
     <% @projects.each do |project|%>
     <li>
-        <%= link_to project.title, project_path(project.id) =%>
-        <%= link_to "編集", edit_project_path(project.id) =%>
-        <%= link_to "削除", project_path(project.id), method: :delete =%>
+        <div class="hage"><%= link_to project.title, project_path(project.id) =%></div>
+        <div class="huga"><%= link_to "スレッド名を編集", edit_project_path(project.id) =%>
+        <%= link_to "スレッドを削除", project_path(project.id), method: :delete =%></div>
     </li>
     <% end %>
 </ul>
 
-<p><%= link_to "投稿する" , new_project_path =%></p>
+<p><%= link_to "スレッドを作成する" , new_project_path =%></p>
 
 <%#= project.inspect %>
