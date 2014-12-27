@@ -2,8 +2,6 @@ class ProjectsController < ApplicationController
 
     before_action :set_project, only: [:show, :edit, :update, :destroy]
 
-
-
     def index
         @projects = Project.all
     end
@@ -28,17 +26,10 @@ class ProjectsController < ApplicationController
     def edit
     end
 
-
-
-
-
     def destroy
         @project.destroy
             redirect_to projects_path
     end
-
-
-
 
     def update
         if @project.update(project_params)

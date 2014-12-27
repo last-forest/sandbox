@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$(function(){
-    $('.hoge').css('color', 'red');
+$(function() {
+    $("input[type=checkbox]").click(function() {
+        $.post('/projects/'+$(this).data('project_id')+'/tasks/'+$(this).data('id')+'/toggle');
+    });
 });

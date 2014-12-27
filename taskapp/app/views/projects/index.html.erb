@@ -1,8 +1,8 @@
-<h1 class="hoge">株式掲示板</h1>
+<h1 class="hoge">samorimo掲示板</h1>
 <ul>
     <% @projects.each do |project|%>
     <li>
-        <div class="hage"><%= link_to project.title, project_path(project.id) =%></div>
+        <div class="hage"><%= link_to project.title, project_path(project.id) =%>(<%= project.tasks.count %>)</div>
         <div class="huga"><%= link_to "スレッド名を編集", edit_project_path(project.id) =%>
         <%= link_to "スレッドを削除", project_path(project.id), method: :delete =%></div>
     </li>
@@ -10,5 +10,3 @@
 </ul>
 
 <p><%= link_to "スレッドを作成する" , new_project_path =%></p>
-
-<%= new_project_path.inspect %>

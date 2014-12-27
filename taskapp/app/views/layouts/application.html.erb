@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Taskapp</title>
+  <title>開発５</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-<%= link_to "HOME", projects_path %>
-
+<div style="padding:4px 5px;border-color:#666666;border-style:double;background:#F8F8F8;">
+  <%= yield %>
+  <%= link_to "スレッド一覧に戻る", projects_path %><br>
+  <%= link_to "リスペクト", 'http://textream.yahoo.co.jp/' %>
+</div>
 </body>
 </html>
